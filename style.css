@@ -1,0 +1,56 @@
+body {
+    background-color: #f4f7f6;
+    font-family: Tahoma, Arial, sans-serif; /* در آینده فونت فارسی خوشگلتر اضافه میکنیم */
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.app-container {
+    background-color: white;
+    width: 100%;
+    max-width: 400px; /* این باعث میشه توی کامپیوتر هم شبیه موبایل دیده بشه */
+    min-height: 100vh;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    padding: 30px 0;
+    border-bottom: 2px solid #008080;
+}
+
+.logo { font-size: 50px; }
+
+h1 { color: #008080; margin: 10px 0; }
+
+.tagline { color: #666; font-size: 14px; }
+
+.menu-section { margin-top: 30px; }
+
+h2 {
+    font-size: 18px;
+    background-color: #e0f2f1;
+    padding: 10px;
+    border-radius: 8px;
+    color: #00695c;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 5px;
+    border-bottom: 1px dashed #ddd;
+}
+
+.item-name { font-weight: bold; }
+
+.item-price { color: #008080; }
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    color: #999;
+    font-size: 12px;
+}

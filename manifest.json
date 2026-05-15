@@ -1,0 +1,16 @@
+{
+  "name": "DoDolphin Cafe",
+  "short_name": "دودلفین",
+  "description": "منوی دیجیتال و سفارش آنلاین دودلفین کافه درگهان",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#008080",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/2311/2311543.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoDolphin Cafe | منوی دیجیتال</title>
+    
+    <link rel="manifest" href="manifest.json">
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js');
+        }
+    </script>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <header>
+            <div class="logo">🐬</div>
+            <h1>دودلفین کافه</h1>
+            <p class="tagline">تجربه طعم اصیل قهوه در درگهان</p>
+        </header>
+
+        <section class="menu-section">
+            <h2>☕ منوی قهوه‌های گرم</h2>
+            
+            <div class="menu-item">
+                <span class="item-name">اسپرسو (سینگل)</span>
+                <span class="item-price">۴۰,۰۰۰ ت</span>
+            </div>
+
+            <div class="menu-item">
+                <span class="item-name">لاته آرت</span>
+                <span class="item-price">۸۵,۰۰۰ ت</span>
+            </div>
+
+            <div class="menu-item">
+                <span class="item-name">کاپوچینو</span>
+                <span class="item-price">۸۰,۰۰۰ ت</span>
+            </div>
+        </section>
+
+        <section class="menu-section">
+            <h2>🧊 بار سرد</h2>
+            <div class="menu-item">
+                <span class="item-name">آیس لاته</span>
+                <span class="item-price">۹۰,۰۰۰ ت</span>
+            </div>
+            <div class="menu-item">
+                <span class="item-name">آفوگاتو</span>
+                <span class="item-price">۹۵,۰۰۰ ت</span>
+            </div>
+        </section>
+
+        <footer>
+            <p>📍 مجتمع دلفین، درگهان</p>
+        </footer>
+    </div>
+
+</body>
+</html>
