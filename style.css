@@ -1,56 +1,55 @@
-body {
-    background-color: #f4f7f6;
-    font-family: Tahoma, Arial, sans-serif; /* در آینده فونت فارسی خوشگلتر اضافه میکنیم */
-    margin: 0;
-    display: flex;
-    justify-content: center;
+:root { --gold: #d4af37; --dark: #000; }
+
+body, html { margin: 0; padding: 0; background: var(--dark); font-family: Tahoma, sans-serif; }
+
+/* استایل صفحه اول (Splash) */
+#splash-page { width: 100%; height: 100vh; display: flex; justify-content: center; }
+.container { position: relative; height: 100vh; aspect-ratio: 562 / 1000; }
+.bg-photo { height: 100%; width: auto; display: block; }
+
+.btn-on-door {
+    position: absolute; top: 70.5%; left: 50%; transform: translateX(-50%);
+    width: 30%; height: 4.5%; background: linear-gradient(45deg, var(--gold), #f9e297);
+    color: #000; display: flex; align-items: center; justify-content: center;
+    font-size: 13px; font-weight: bold; border-radius: 4px; cursor: pointer;
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
 }
 
-.app-container {
-    background-color: white;
-    width: 100%;
-    max-width: 400px; /* این باعث میشه توی کامپیوتر هم شبیه موبایل دیده بشه */
-    min-height: 100vh;
-    box-shadow: 0 0 20px rgba(0,0,0,0.1);
-    padding: 20px;
+.social-box { position: absolute; top: 55%; left: 5%; display: flex; flex-direction: column; gap: 8px; }
+.social-item {
+    background: rgba(0, 0, 0, 0.6); color: #fff; text-decoration: none;
+    font-size: 11px; padding: 5px 10px; border-radius: 15px; border: 1px solid var(--gold);
+    backdrop-filter: blur(5px);
 }
 
-header {
-    text-align: center;
-    padding: 30px 0;
-    border-bottom: 2px solid #008080;
+/* استایل صفحه منو */
+#menu-page { background: #0a0a0a; min-height: 100vh; color: white; direction: rtl; }
+.menu-header { background: #1a1a1a; padding: 15px; border-bottom: 1px solid var(--gold); sticky: top; }
+.menu-top { display: flex; justify-content: space-between; align-items: center; }
+
+.menu-content { padding: 20px; }
+.product-item {
+    background: #151515; border-radius: 12px; padding: 15px; margin-bottom: 15px;
+    display: flex; justify-content: space-between; align-items: center; border: 1px solid #222;
+}
+.p-info h3 { margin: 0; font-size: 16px; }
+.p-info p { margin: 5px 0; color: #888; font-size: 12px; }
+.p-price { color: var(--gold); font-weight: bold; }
+
+.add-btn {
+    background: var(--gold); border: none; width: 35px; height: 35px;
+    border-radius: 8px; font-size: 20px; cursor: pointer;
 }
 
-.logo { font-size: 50px; }
-
-h1 { color: #008080; margin: 10px 0; }
-
-.tagline { color: #666; font-size: 14px; }
-
-.menu-section { margin-top: 30px; }
-
-h2 {
-    font-size: 18px;
-    background-color: #e0f2f1;
-    padding: 10px;
-    border-radius: 8px;
-    color: #00695c;
+.checkout-footer {
+    position: fixed; bottom: 0; width: 100%; padding: 15px;
+    background: #1a1a1a; border-top: 1px solid var(--gold); box-sizing: border-box;
+}
+.pay-btn {
+    width: 100%; background: #28a745; color: white; border: none;
+    padding: 12px; border-radius: 8px; font-weight: bold;
 }
 
-.menu-item {
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 5px;
-    border-bottom: 1px dashed #ddd;
-}
-
-.item-name { font-weight: bold; }
-
-.item-price { color: #008080; }
-
-footer {
-    text-align: center;
-    margin-top: 50px;
-    color: #999;
-    font-size: 12px;
-}
+/* انیمیشن تپنده */
+.pulse { animation: p-anim 2s infinite; }
+@keyframes p-anim { 0%, 100% { opacity: 1; } 50% { opacity: 0.7; } }
