@@ -3,61 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DoDolphin Cafe | منوی دیجیتال</title>
-    
-    <link rel="manifest" href="manifest.json">
-    <script>
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('sw.js');
-        }
-    </script>
-    
+    <title>DoDolphin Cafe</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="app-container">
-        <header>
-            <div class="logo">🐬</div>
-            <h1>دودلفین کافه</h1>
-            <p class="tagline">تجربه طعم اصیل قهوه در درگهان</p>
-        </header>
-
-        <section class="menu-section">
-            <h2>☕ منوی قهوه‌های گرم</h2>
+    <div id="splash-page">
+        <div class="container">
+            <img src="dodolphin-night.jpg" class="bg-photo">
             
-            <div class="menu-item">
-                <span class="item-name">اسپرسو (سینگل)</span>
-                <span class="item-price">۴۰,۰۰۰ ت</span>
-            </div>
+            <div class="btn-on-door pulse" onclick="showMenu()">ورود به منو</div>
 
-            <div class="menu-item">
-                <span class="item-name">لاته آرت</span>
-                <span class="item-price">۸۵,۰۰۰ ت</span>
+            <div class="social-box">
+                <a href="https://instagram.com/DoDolphincafe" class="social-item">📸 اینستاگرام</a>
+                <a href="https://wa.me/989303030526" class="social-item">💬 واتس‌اپ</a>
+                <a href="#" class="social-item">📍 لوکیشن</a>
             </div>
-
-            <div class="menu-item">
-                <span class="item-name">کاپوچینو</span>
-                <span class="item-price">۸۰,۰۰۰ ت</span>
-            </div>
-        </section>
-
-        <section class="menu-section">
-            <h2>🧊 بار سرد</h2>
-            <div class="menu-item">
-                <span class="item-name">آیس لاته</span>
-                <span class="item-price">۹۰,۰۰۰ ت</span>
-            </div>
-            <div class="menu-item">
-                <span class="item-name">آفوگاتو</span>
-                <span class="item-price">۹۵,۰۰۰ ت</span>
-            </div>
-        </section>
-
-        <footer>
-            <p>📍 مجتمع دلفین، درگهان</p>
-        </footer>
+        </div>
     </div>
 
+    <div id="menu-page" style="display:none;">
+        <header class="menu-header">
+            <div class="menu-top">
+                <span onclick="location.reload()" style="cursor:pointer">❮ بازگشت</span>
+                <h2 style="color:#d4af37; margin:0;">منوی دودلفین</h2>
+                <div class="cart-icon">🛒 <span id="cart-count">0</span></div>
+            </div>
+        </header>
+
+        <main class="menu-content">
+            <div class="product-item">
+                <div class="p-info">
+                    <h3>اسپرسو دبل</h3>
+                    <p>۱۰۰٪ عربیکا، طعمی قوی</p>
+                    <span class="p-price">۶۵,۰۰۰ تومان</span>
+                </div>
+                <button class="add-btn" onclick="add()">+</button>
+            </div>
+
+            <div class="product-item">
+                <div class="p-info">
+                    <h3>کیک شکلاتی مخصوص</h3>
+                    <p>تازه و خانگی</p>
+                    <span class="p-price">۸۵,۰۰۰ تومان</span>
+                </div>
+                <button class="add-btn" onclick="add()">+</button>
+            </div>
+        </main>
+
+        <div id="checkout-bar" class="checkout-footer" style="display:none;">
+            <button class="pay-btn">ثبت سفارش در واتس‌اپ</button>
+        </div>
+    </div>
+
+    <script>
+        // تابع جابجایی بین دو صفحه
+        function showMenu() {
+            document.getElementById('splash-page').style.display = 'none';
+            document.getElementById('menu-page').style.display = 'block';
+        }
+
+        // تابع ساده برای سبد خرید
+        let count = 0;
+        function add() {
+            count++;
+            document.getElementById('cart-count').innerText = count;
+            document.getElementById('checkout-bar').style.display = 'block';
+        }
+    </script>
 </body>
 </html>
